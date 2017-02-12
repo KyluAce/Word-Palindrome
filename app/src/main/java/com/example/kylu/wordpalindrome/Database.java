@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by kylu on 11.02.17.
  */
-//
+
 public class Database extends SQLiteOpenHelper
     {
         public static final String DATABASE_NAME = "Words.db";
