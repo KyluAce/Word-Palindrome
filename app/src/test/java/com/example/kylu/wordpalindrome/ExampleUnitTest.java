@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
     public class ExampleUnitTest extends MainActivity {
 
+        //
 
         @Test
         public void isPalindrome_incorrect()
