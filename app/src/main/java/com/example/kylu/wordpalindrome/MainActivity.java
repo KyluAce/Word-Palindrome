@@ -108,8 +108,6 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
     }
-
-
     public boolean isPalindrome(String check)
     {
         check=check.replaceAll("\\s+",""); //remove all whitespaces
@@ -123,6 +121,4 @@ public class MainActivity extends AppCompatActivity  {
         }
         return true;
     }
-
-
 }
