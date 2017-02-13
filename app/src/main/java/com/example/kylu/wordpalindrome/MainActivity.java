@@ -1,4 +1,5 @@
 package com.example.kylu.wordpalindrome;
+
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +16,6 @@ public class MainActivity extends AppCompatActivity  {
     private Button btCheck;
     private EditText word;
     private ListView list;
-    //private TextView result;
     Database db;
 
     @Override
@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity  {
 
         btCheck = (Button)findViewById(R.id.btCheck);
         word = (EditText)findViewById(R.id.word);
-        //result = (TextView)findViewById(R.id.result);
         list = (ListView)findViewById(R.id.list);
         db = new Database(this);
 
