@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
         android:id="@+id/btCheck" />
 
     <ListView
@@ -39,12 +40,12 @@
         android:layout_marginBottom="30dp"
         android:id="@+id/list" />
 
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/btCheck"
-        android:layout_marginTop="20dp"
-        android:id="@+id/result" />
-</RelativeLayout>
+    <!--  <TextView
+          android:text=""
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_above="@+id/btCheck"
+          android:layout_marginTop="20dp"
+          android:id="@+id/result" /> -->?
+  </RelativeLayout>

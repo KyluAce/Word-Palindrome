@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity  {
     private Button btCheck;
     private EditText word;
     private ListView list;
-    private TextView result;
+    //private TextView result;
     Database db;
 
     @Override
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity  {
 
         btCheck = (Button)findViewById(R.id.btCheck);
         word = (EditText)findViewById(R.id.word);
-        result = (TextView)findViewById(R.id.result);
+        //result = (TextView)findViewById(R.id.result);
         list = (ListView)findViewById(R.id.list);
         db = new Database(this);
 
@@ -47,13 +47,11 @@ public class MainActivity extends AppCompatActivity  {
         {
             while(data.moveToNext())
             {
-                wordList.add(data.getString(0) + " || " +  data.getString(1) + " || " + data.getString(2));
+                wordList.add("ID: " + data.getString(0) + "\n" + "Word: " +  data.getString(1)+ "\n" + "Result: " + data.getString(2));
                 ArrayAdapter listAdapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, wordList);
                 list.setAdapter(listAdapter);
             }
         }
-
-
 
         btCheck.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,31 +63,22 @@ public class MainActivity extends AppCompatActivity  {
                 String s = word.getText().toString();
                 if (isPalindrome(s))
                 {
-                    result.setTextColor(Color.GREEN);
-                    result.setText("This is palindrome");
+                    Toast.makeText(MainActivity.this,"This is palindrome", Toast.LENGTH_LONG).show();
                     boolean isInserted = db.instertData(s,"True");
-                    if(isInserted == true)
+                    if(isInserted != true)
                     {
-                        Toast.makeText(MainActivity.this,"Data added", Toast.LENGTH_LONG).show();
-
-                    }
-                    else
                         Toast.makeText(MainActivity.this,"Data not added", Toast.LENGTH_LONG).show();
-
+                    }
                 }
                 else
                 {
-                    result.setTextColor(Color.RED);
-                    result.setText("This is not palindrome");
+                    Toast.makeText(MainActivity.this,"This is not palindrome", Toast.LENGTH_LONG).show();
                     boolean isInserted =db.instertData(s,"False");
 
-                    if(isInserted == true)
+                    if(isInserted != true)
                     {
-                        Toast.makeText(MainActivity.this,"Data added", Toast.LENGTH_LONG).show();
-                    }
-                    else
                         Toast.makeText(MainActivity.this,"Data not added", Toast.LENGTH_LONG).show();
-
+                    }
                 }
 
                 if(data.getCount()==0)
@@ -100,7 +89,7 @@ public class MainActivity extends AppCompatActivity  {
                 {
                     while(data.moveToNext())
                     {
-                        wordList.add(data.getString(0) + " || " +  data.getString(1) + " || " + data.getString(2));
+                        wordList.add("ID: " + data.getString(0) + "\n" + "Word: " +  data.getString(1)+ "\n" + "Result: " + data.getString(2));
                         ArrayAdapter listAdapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, wordList);
                         list.setAdapter(listAdapter);
                     }
@@ -109,8 +98,9 @@ public class MainActivity extends AppCompatActivity  {
         });
     }
     public boolean isPalindrome(String check)
-    {
+    {   
         check=check.replaceAll("\\s+",""); //remove all whitespaces
+        check=check.toLowerCase();
         int n = check.length();
         for(int i=0;i<(n/2);i++)
         {

@@ -17,6 +17,6 @@ import static org.junit.Assert.*;
         @Test
         public void isPalindrome_correct()
         {
-            assertTrue(isPalindrome("k ajak"));
+            assertTrue(isPalindrome("K ajak"));
         }
     }
