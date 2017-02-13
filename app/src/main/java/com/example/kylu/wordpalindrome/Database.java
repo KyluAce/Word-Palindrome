@@ -6,10 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by kylu on 11.02.17.
- */
-
 public class Database extends SQLiteOpenHelper
     {
         public static final String DATABASE_NAME = "Words.db";
@@ -18,12 +14,11 @@ public class Database extends SQLiteOpenHelper
         public static final String COL_2 = "WORD";
         public static final String COL_3 = "RESULT";
 
-
-
-        public Database(Context context) {
+        public Database(Context context)
+        {
             super(context, DATABASE_NAME, null, 1);
 
-    }
+        }
 
     @Override
     public void onCreate(SQLiteDatabase db)

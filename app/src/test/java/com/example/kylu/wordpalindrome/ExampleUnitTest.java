@@ -4,11 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-
-    public class ExampleUnitTest extends MainActivity {
-
-        //
-
+    public class ExampleUnitTest extends MainActivity
+    {
         @Test
         public void isPalindrome_incorrect()
         {

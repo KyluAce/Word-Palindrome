@@ -2,7 +2,6 @@ package com.example.kylu.wordpalindrome;
 
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,13 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  {
-////
     private Button btCheck;
     private EditText word;
     private ListView list;
@@ -28,7 +24,6 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_main);
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
 
         btCheck = (Button)findViewById(R.id.btCheck);
         word = (EditText)findViewById(R.id.word);
