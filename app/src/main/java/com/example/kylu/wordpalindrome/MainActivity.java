@@ -1,5 +1,4 @@
 package com.example.kylu.wordpalindrome;
-
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
